@@ -1,3 +1,16 @@
+
+# Bash script that is tightly coupled with pom.xml file in this Git repo project.
+
+# Run this script and the function in this file is dummy for now and not used
+
+# Purpose of this script is to invoke the pom.xml in this Git repo
+
+# What you need to do is, copy this script and pom.xml in this Git repo into a folder where the Provider Portal Git repos are clone. Generally this folder is located at ~/provider-portal folder.
+
+# Assuming all the Provide Portal Git Repos are cloned inside the the ~/provider-portal folder, you need to run this script (assuming pom.xml in this Git repo is also placed at ~/provider-portal)
+
+# The pom.xml is designed to build all the Provider Portal Maven projects through this command.
+
 STR_TO_CHECK="BUILD SUCCESS"
 
 function use_it_later() {
