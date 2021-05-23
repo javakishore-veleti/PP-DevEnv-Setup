@@ -5,19 +5,19 @@
 
 # This script purpose is to check any uncommit files in all of the Provider Portal Git Repos that are "git cloned" into the ~/provider-portal folder
 
-STR_TO_CHECK="Your branch is up to date"
+STR_TO_CHECK="Untracked files"
 
 for aFileOrDir in *; do
-    if [ -d "$aFileOrDir" ]; then
 
+    if [ -d "$aFileOrDir" ]; then
         cd "$aFileOrDir"
         CMD_OUTPUT=$(git status)
-        
+	
         if [[ "$CMD_OUTPUT" == *"$STR_TO_CHECK"* ]]; then
-  			  echo "Good -> ${aFileOrDir}"
-  		  else
-  			  echo "${aFileOrDir} Have Git Updated Files"	
-		    fi
-          cd ..
+         	echo "${aFileOrDir} Have Git Updated Files"  
+  	else
+          	echo "Good -> ${aFileOrDir}"
+	fi
+        cd ..
     fi
 done
