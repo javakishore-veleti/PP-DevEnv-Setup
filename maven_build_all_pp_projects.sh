@@ -11,6 +11,10 @@
 
 # The pom.xml is designed to build all the Provider Portal Maven projects through this command.
 
+# How to run
+# cd ~/provider-portal
+# ./maven_build_all_pp_projects.sh
+
 STR_TO_CHECK="BUILD SUCCESS"
 
 function use_it_later() {
